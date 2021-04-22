@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-4">
+
+    <div class="list-group">
+      <div class="list-group" *ngFor="let supplier of suppliers">
+        <a class="list-group-item list-group-item-action"
+           (click)="retrieveCatalogBySupplierId(supplier.id)">{{supplier.name}}</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-8">
+
+    <div class="container" *ngFor="let catalog of catalogs">
+
+      <div class="card">
+        <div class="card-header">
+          Catalogo {{catalog.id}}
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+
+            <div class="col-auto">
+              <label>Peso Minimo: {{catalog.minWeight}}</label>
+            </div>
+
+            <div class="col-auto">
+              <label>Peso Maximo: {{catalog.maxWeight}}</label>
+            </div>
+
+            <div class="col-auto">
+              <label>Precio: {{catalog.price}}</label>
+            </div>
+
+            <footer class="blockquote-footer">
+
+              <div class="col-auto">
+                <label>Origin: {{catalog.source.name}} ( {{catalog.source.department.name}} ) - Destino: {{catalog.destination.name}} ( {{catalog.destination.department.name}} )</label>
+              </div>
+
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+      <br>
+    </div>
+
+  </div>
+
+</div>

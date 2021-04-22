@@ -1,0 +1,48 @@
+<br>
+<div class="container">
+
+  <div class="row" *ngFor="let delivery of deliveries">
+    <div class="card">
+      <div class="card-header">
+        Despacho {{delivery.id}} - Creacion: {{delivery.createdAt}} - Estado {{delivery.state}}
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+
+          <div class="col-auto">
+            <label>Origen: {{delivery.sourceName}}</label>
+          </div>
+
+          <div class="col-auto">
+            <label>Destino: {{delivery.destinationName}}</label>
+          </div>
+
+          <div class="col-auto">
+            <label>Peso (gr): {{delivery.weight}}</label>
+          </div>
+
+          <div class="col-auto">
+            <label>Volumen (m3): {{delivery.volume}}</label>
+          </div>
+
+          <div class="col-auto">
+            <label>Descripcion: {{delivery.description}}</label>
+          </div>
+
+          <footer class="blockquote-footer">
+
+            <div class="col-auto">
+              <div class="mb-3">
+                <label  class="form-label">Oferta</label>
+                <input type="number" class="form-control" id="offer{{delivery.id}}">
+                <button type="button" class="btn btn-primary btn-sm btn-success" (click)="createOffer(delivery.id)">Enviar oferta</button>
+              </div>
+            </div>
+
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>

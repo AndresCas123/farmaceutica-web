@@ -1,0 +1,21 @@
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh">
+  <div class="row" style="width: 40%;">
+
+    <div class="col-10">
+
+        <img class="mb-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Javeriana.svg/1200px-Javeriana.svg.png" alt="" width="150" height="200" style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
+        <h1 class="h3 mb-3 font-weight-normal" style="display: block; margin-left: auto; margin-right: auto; width: 40%;"></h1>
+
+        <input id="inputEmail" class="form-control" placeholder="Ingresar usuario" required="" autofocus="" [(ngModel)]="userLogin.username">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" [(ngModel)]="userLogin.password">
+        <br>
+        <button class="w-100 btn btn-lg btn-primary" (click)="authenticate()">Iniciar Session</button>
+        <br>
+        <p class="w-100 text-muted">Patrones de Software ©2021</p>
+
+    </div>
+
+  </div>
+
+
+</div>

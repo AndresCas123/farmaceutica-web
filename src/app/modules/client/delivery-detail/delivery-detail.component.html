@@ -1,0 +1,62 @@
+<div class="container"*ngFor="let delivery of deliveries">
+  <br>
+  <div class="row" >
+    <div class="card">
+      <div class="card-header">
+        Despacho {{delivery.id}} - Creacion: {{delivery.createdAt}} - Estado {{delivery.state}}
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+
+          <div class="col-auto">
+            <label>Origen: {{delivery.sourceName}}</label>
+          </div>
+
+          <div class="col-auto">
+            <label>Destino: {{delivery.destinationName}}</label>
+          </div>
+
+          <div class="col-auto">
+            <label>Peso (gr): {{delivery.weight}}</label>
+          </div>
+
+          <div class="col-auto">
+            <label>Volumen (m3): {{delivery.volume}}</label>
+          </div>
+
+          <div class="col-auto">
+            <label>Descripcion: {{delivery.description}}</label>
+          </div>
+
+          <footer class="blockquote-footer">
+            <div *ngIf="!areDeliveriesEmpty(delivery.offers)">
+
+              <div class="alert alert-success" role="alert">
+                Ya tienes ofertas en tu orden de despacho, selecciona una!!
+              </div>
+              <div *ngFor="let offer of delivery.offers">
+                <div class="col-auto">
+                  <label>Proveedor: {{offer.supplierName}} - Precio {{offer.price}}</label>
+                  <button type="button" class="btn btn-primary btn-sm btn-success" (click)="sendOffer(delivery.id, offer.id)">Tomar oferta</button>
+                </div>
+                <br>
+              </div>
+
+            </div>
+
+            <div *ngIf="areDeliveriesEmpty(delivery.offers)">
+              <div class="col-auto">
+                <div class="alert alert-danger" role="alert">
+                  Esta orden de despacho no tiene ofertas asignadas!
+                </div>
+              </div>
+              <br>
+            </div>
+
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
