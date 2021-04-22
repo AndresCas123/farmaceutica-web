@@ -3,7 +3,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="[{ outlets: { client_outlet: ['home-client'] } }]">Proveedor: {{user.sub}}</a>
+	<img src="/assets/img/logistica.png" alt="">
+    <a class="navbar-brand" [routerLink]="[{ outlets: { client_outlet: ['home-client'] } }]">&nbsp;&nbsp;Usuario: Proveedor {{user.sub}}</a>
     <label></label>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,6 +24,30 @@
 <br>
 
 <router-outlet name="supplier_outlet"></router-outlet>
-<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh" *ngIf="isShown">
-  <img  src="https://i.pinimg.com/736x/2e/f2/f3/2ef2f3289430a49cfbd483bf44dd2f17.jpg" alt="" width="50%" height="50%" style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
+
+<div class="container" style="display:block; justify-content: center; align-items: center; height: 100vh" *ngIf="isShown">
+  <div class="col-12">
+  	<div class="col-11">
+		<table>
+		<tr>
+			<td>
+				<h1>Home</h1>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img  src="/assets/img/homepage.png" class="img-responsive">
+			</td>
+			<td width="90%">
+				<h3>Bienvenido al Sistema de Solicitudes y generación de ordenes de Desapacho - Farmaceutica La Javeriana</h3>
+			</td>
+		</tr>
+	</table>
+	<p align="justify">
+	Estimado Usuario(a): En la parte superior encontrara un menu de opciones, en la cual puede consultar las diferentes funcionalidades disponibles del Sistema de Solicitudes y gerenación de ordenes de Despacho - Farmaceutica La Javeriana. Favor ver solicitudes disponibles.
+	</p>
+	
+	
+  </div>
+</div>
 </div>
