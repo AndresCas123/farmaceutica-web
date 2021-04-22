@@ -1,0 +1,7 @@
+#global2 {
+	height: 600px;
+	width: 100%;
+	border: 1px solid #ddd;
+
+	overflow-y: scroll;
+}

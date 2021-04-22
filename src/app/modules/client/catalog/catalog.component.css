@@ -1,0 +1,14 @@
+#global {
+	height: auto;
+	width: 20%;
+	border: 1px solid #ddd;
+
+	overflow-y: scroll;
+}
+#global2 {
+	height: 400px;
+	width: 60%;
+	border: 1px solid #ddd;
+
+	overflow-y: scroll;
+}

@@ -1,31 +1,49 @@
-<div class="container"*ngFor="let delivery of deliveries">
+<div class="container">
+	<table>
+		<tr>
+			<td>
+				<img  src="/assets/img/quotation.png" class="img-responsive">
+			</td>
+			<td width="90%">
+				<h1>Listado de Solicitudes y Ofertas</h1>
+			</td>
+		</tr>
+	</table>
+	<p align="justify">
+	Estimado Usuario(a): En la parte inferior encontrara el listado de solicitudes creadas con su correspondientes ofertas en cada tarjeta. Al momento de tener ofertas podras tomar alguna para su posterior cotización definitiva.
+	</p>
+</div> 
+
+<div class="container" id="global2">
+<div class="col-12"*ngFor="let delivery of deliveries">
   <br>
   <div class="row" >
+ 
     <div class="card">
       <div class="card-header">
-        Despacho {{delivery.id}} - Creacion: {{delivery.createdAt}} - Estado {{delivery.state}}
+        <b>Despacho</b> {{delivery.id}} - <b>Creacion:</b> {{delivery.createdAt}} - <b>Estado:</b> {{delivery.state}}
       </div>
       <div class="card-body">
         <blockquote class="blockquote mb-0">
 
           <div class="col-auto">
-            <label>Origen: {{delivery.sourceName}}</label>
+            <label><b>Origen:</b> {{delivery.sourceName}}</label>
           </div>
 
           <div class="col-auto">
-            <label>Destino: {{delivery.destinationName}}</label>
+            <label><b>Destino:</b> {{delivery.destinationName}}</label>
           </div>
 
           <div class="col-auto">
-            <label>Peso (gr): {{delivery.weight}}</label>
+            <label><b>Peso (kg):</b> {{delivery.weight}}</label>
           </div>
 
           <div class="col-auto">
-            <label>Volumen (m3): {{delivery.volume}}</label>
+            <label><b>Volumen (cm3):</b> {{delivery.volume}}</label>
           </div>
 
           <div class="col-auto">
-            <label>Descripcion: {{delivery.description}}</label>
+            <label><b>Descripción:</b> {{delivery.description}}</label>
           </div>
 
           <footer class="blockquote-footer">
